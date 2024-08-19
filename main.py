@@ -122,6 +122,9 @@ while True:
     if not success:
         break
 
+    # Flip the image horizontally to remove the mirror effect
+    img = cv2.flip(img, 1)
+
     hands, img = detector.findHands(img)  # Detect hands and landmarks
 
     lmList = []
